@@ -1,0 +1,94 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(175, 104, 234), rgb(101, 99, 232));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  height: auto;
+  width: 1000px;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.background {
+  background: url('/assets/undraw_Server_re_twwj.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: 960px) {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+.details {
+  padding: 2rem;
+  h1 {
+    text-align: center;
+  }
+}
+
+.collapse {
+  .accordian-body {
+    height: 0;
+  }
+}
+
+.accordian-body {
+  transition: height 0.4s ease-in-out;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.accordian {
+  border-bottom: solid 1px black;
+}
+
+.accordian-header {
+  position: relative;
+  i {
+    position: absolute;
+    right: 5px;
+    transform: translateY(25%);
+    pointer-events: none;
+  }
+}
+
+.active {
+  .accordian-button {
+    font-weight: bold;
+  }
+}
+
+.accordian-button {
+  width: 100%;
+  background: inherit;
+  border: none;
+  text-align: left;
+  padding: 0;
+}
